@@ -57,14 +57,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Volteryde | Smart Electric Transport for Africa",
     description: "Empowering sustainable movement across Africa with electric transport and intelligent mobility solutions.",
+    url: "https://volteryde.com",
     type: "website",
     siteName: "Volteryde",
     images: [
       {
-        url: "/og_image.png",
+        url: "https://volteryde.com/og_image.png",
+        secureUrl: "https://volteryde.com/og_image.png",
         width: 1200,
         height: 630,
         alt: "Volteryde - Smart Electric Transport for Africa",
+        type: "image/png",
       },
     ],
     locale: "en_US",
@@ -73,7 +76,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Volteryde | Smart Electric Transport for Africa",
     description: "Join the move toward greener transportation. Volteryde empowers sustainable movement across Africa with electric transport and intelligent mobility solutions.",
-    images: ["/og_image.png"],
+    images: ["https://volteryde.com/og_image.png"],
     creator: "@volteryde",
     site: "@volteryde",
   },
