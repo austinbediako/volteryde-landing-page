@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { contactItemVariants, containerVariants, copyrightVariants, leftSideVariants, rightSideVariants } from "@/libs/animation";
+import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   const ref = useRef(null);
@@ -87,6 +88,37 @@ export default function Footer() {
               >
                 Phone: +233 534544454
               </motion.p>
+            </motion.div>
+            <motion.div
+              className="mt-6 flex gap-4"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <Link
+                href="https://www.tiktok.com/@volteryde?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-200 hover:text-primary-100 transition-colors"
+              >
+                <FaTiktok size={24} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/volteryde/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-200 hover:text-primary-100 transition-colors"
+              >
+                <FaLinkedin size={24} />
+              </Link>
+              <Link
+                href="https://www.instagram.com/volterydeghana/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-200 hover:text-primary-100 transition-colors"
+              >
+                <FaInstagram size={24} />
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>
