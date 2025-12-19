@@ -92,7 +92,7 @@ export default function HowItWorks() {
               >
                 <Image
                   src={PhoneImg}
-                  alt="volteryde App"
+                  alt="Volteryde mobile app - book electric bus rides in Ghana and Africa"
                   width={300}
                   height={600}
                   className="w-full h-auto"

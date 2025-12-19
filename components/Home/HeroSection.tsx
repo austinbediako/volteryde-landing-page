@@ -24,10 +24,12 @@ export default function HeroSection() {
       >
         <Image
           src={HeroImg}
-          alt="volteryde Electric Bus"
+          alt="Volteryde Electric Bus - Smart sustainable transport in Africa"
           className="object-cover"
           fill
+          sizes="100vw"
           priority
+          placeholder="blur"
         />
         {/* Gradient Overlay - Darker on Left */}
         <motion.div
@@ -108,12 +110,14 @@ export default function HeroSection() {
           repeatDelay: 0.5
         }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        aria-hidden="true"
       >
         <svg
           className="w-6 h-6 text-white"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"

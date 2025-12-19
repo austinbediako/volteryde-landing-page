@@ -32,7 +32,7 @@ export default function Footer() {
               <Link href="/" className="">
                 <Image
                   src={Logo}
-                  alt="Logo"
+                  alt="Volteryde - Electric bus transport company logo"
                   width={90}
                   height={45}
                   className="object-contain"
@@ -99,25 +99,28 @@ export default function Footer() {
                 href="https://www.tiktok.com/@volteryde?is_from_webapp=1&sender_device=pc"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow Volteryde on TikTok"
                 className="text-secondary-200 hover:text-primary-100 transition-colors"
               >
-                <FaTiktok size={24} />
+                <FaTiktok size={24} aria-hidden="true" />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/volteryde/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Connect with Volteryde on LinkedIn"
                 className="text-secondary-200 hover:text-primary-100 transition-colors"
               >
-                <FaLinkedin size={24} />
+                <FaLinkedin size={24} aria-hidden="true" />
               </Link>
               <Link
                 href="https://www.instagram.com/volterydeghana/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Follow Volteryde on Instagram"
                 className="text-secondary-200 hover:text-primary-100 transition-colors"
               >
-                <FaInstagram size={24} />
+                <FaInstagram size={24} aria-hidden="true" />
               </Link>
             </motion.div>
           </motion.div>

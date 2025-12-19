@@ -44,9 +44,14 @@ export default function GetVolteryde() {
           animate={isInView ? "visible" : "hidden"}
           variants={buttonContainerVariants}
         >
-          {/* Play Store Button */}
+          {/* Play Store Button - TODO: Replace with actual Google Play Store URL */}
           <motion.div variants={buttonVariants}>
-            <Link href="#">
+            <Link 
+              href="https://play.google.com/store/apps/details?id=com.volteryde.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Volteryde from Google Play Store"
+            >
               <motion.button
                 className="group relative flex items-center justify-center gap-3 bg-black text-white px-5 py-2.5 rounded-lg border border-gray-800 transition-all hover:bg-gray-900"
                 whileHover={{ scale: 1.05 }}
@@ -71,9 +76,14 @@ export default function GetVolteryde() {
             </Link>
           </motion.div>
 
-          {/* App Store Button */}
+          {/* App Store Button - TODO: Replace with actual App Store URL */}
           <motion.div variants={buttonVariants}>
-            <Link href="#">
+            <Link 
+              href="https://apps.apple.com/app/volteryde/id0000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Volteryde from Apple App Store"
+            >
               <motion.button
                 className="group relative flex items-center justify-center gap-3 bg-black text-white px-5 py-2.5 rounded-lg border border-gray-800 transition-all hover:bg-gray-900"
                 whileHover={{ scale: 1.05 }}

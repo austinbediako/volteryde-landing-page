@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Footer, Navbar } from "@/components/global";
@@ -9,6 +9,13 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0CCF0E",
+};
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Volteryde",
@@ -17,7 +24,11 @@ export const metadata: Metadata = {
   description: "Join the move toward greener transportation. Volteryde empowers sustainable movement across Africa with electric transport and intelligent mobility solutions. Download the app today.",
   keywords: ["Volteryde", "Electric Bus", "Sustainable Transport", "Africa", "Ghana", "Green Energy", "Smart Mobility", "Public Transport"],
   authors: [{ name: "Volteryde Team" }],
-  // metadataBase: new URL("https://volteryde.com"),
+  metadataBase: new URL("https://volteryde.com"),
+  alternates: {
+    canonical: "/",
+  },
+  manifest: "/site.webmanifest",
 
   icons: {
     icon: [
@@ -50,13 +61,21 @@ export const metadata: Metadata = {
     siteName: "Volteryde",
     images: [
       {
-        url: "/assets/Logo.png", // Using the logo as a fallback OG image since opengraph-image.jpg might not exist or be generic
-        width: 800,
-        height: 600,
-        alt: "Volteryde Logo",
+        url: "/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Volteryde - Smart Electric Transport for Africa",
       },
     ],
     locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Volteryde | Smart Electric Transport for Africa",
+    description: "Join the move toward greener transportation. Volteryde empowers sustainable movement across Africa with electric transport and intelligent mobility solutions.",
+    images: ["/og_image.png"],
+    creator: "@volteryde",
+    site: "@volteryde",
   },
 };
 
@@ -65,11 +84,63 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Volteryde",
+    description: "Smart Electric Transport for Africa - Empowering sustainable movement with electric buses and intelligent mobility solutions.",
+    url: "https://volteryde.com",
+    logo: "https://volteryde.com/mainlogo.png",
+    sameAs: [
+      "https://www.linkedin.com/company/volteryde/",
+      "https://www.instagram.com/volterydeghana/",
+      "https://www.tiktok.com/@volteryde"
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+233534544454",
+      email: "info@volteryde.com",
+      contactType: "customer service",
+      areaServed: "GH",
+      availableLanguage: "English"
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "GH"
+    }
+  };
+
+  const softwareAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Volteryde",
+    operatingSystem: "Android, iOS",
+    applicationCategory: "TravelApplication",
+    description: "Book electric bus rides in Africa. Track your bus, pay securely, and enjoy eco-friendly transportation.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD"
+    }
+  };
+
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+        />
+      </head>
+      <body className={`${poppins.variable} font-sans antialiased`}>
         <Navbar />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
