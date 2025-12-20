@@ -46,8 +46,8 @@ export default function Footer() {
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Empowering sustainable movement across Africa with electric transport
-              and intelligent mobility solutions.
+              Volteryde is a public transport mobility company building technology-enabled systems
+              for mass transit operations in emerging markets.
             </motion.p>
           </motion.div>
 
