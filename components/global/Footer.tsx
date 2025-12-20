@@ -47,7 +47,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               Volteryde is a mobility operator and platform company that provides technology-enabled
-              systems for mass transit operations in emerging markets.
+              systems for mass transit operations in Ghana and beyond.
             </motion.p>
           </motion.div>
 
