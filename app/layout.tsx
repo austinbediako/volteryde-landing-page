@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Volteryde",
     default: "Volteryde | Smart Electric Transportation",
   },
-  description: "Volteryde is a public transport mobility company building technology-enabled systems for mass transit operations in emerging markets.",
+  description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in emerging markets.",
   keywords: ["Volteryde", "Electric Bus", "Sustainable Transport", "Africa", "Ghana", "Green Energy", "Smart Mobility", "Public Transport"],
   authors: [{ name: "Volteryde" }],
   creator: "Volteryde",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Volteryde | Smart Electric Transportation",
-    description: "Volteryde is a public transport mobility company building technology-enabled systems for mass transit operations in emerging markets.",
+    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in emerging markets.",
     url: "https://volteryde.com",
     type: "website",
     siteName: "Volteryde",
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Volteryde | Smart Electric Transportation",
-    description: "Volteryde is a public transport mobility company building technology-enabled systems for mass transit operations in emerging markets.",
+    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in emerging markets.",
     images: ["https://volteryde.com/og_image.png"],
     creator: "@volteryde",
     site: "@volteryde",
@@ -104,7 +104,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Volteryde",
-    description: "Volteryde is a public transport mobility company building technology-enabled systems for mass transit operations in emerging markets.",
+    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in emerging markets.",
     url: "https://volteryde.com",
     logo: "https://volteryde.com/mainlogo.png",
     sameAs: [
