@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   description: "Join the move toward greener transportation. Volteryde empowers sustainable movement across Africa with electric transport and intelligent mobility solutions. Download the app today.",
   keywords: ["Volteryde", "Electric Bus", "Sustainable Transport", "Africa", "Ghana", "Green Energy", "Smart Mobility", "Public Transport"],
-  authors: [{ name: "Volteryde Team" }],
+  authors: [{ name: "Volteryde" }],
   creator: "Volteryde",
   publisher: "Volteryde",
   robots: {
