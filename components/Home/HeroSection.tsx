@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import HeroImg from "@/public/assets/heroImg.avif";
+// import HeroImg from "@/public/assets/heroImg.avif";
 
 export default function HeroSection() {
   const { scrollY } = useScroll();
@@ -23,13 +23,12 @@ export default function HeroSection() {
         style={{ y: imageY }}
       >
         <Image
-          src={HeroImg}
+          src="/assets/heroImg.avif"
           alt="Volteryde Electric Bus - Smart sustainable transport in Africa"
           className="object-cover"
           fill
           sizes="100vw"
           priority
-          placeholder="blur"
         />
         {/* Gradient Overlay - Darker on Left */}
         <motion.div
