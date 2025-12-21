@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Right Side - Contact Info */}
           <motion.div variants={rightSideVariants}>
             <motion.h3
-              className="text-lg font-bold text-primary-100 mb-4"
+              className="text-lg font-bold text-volteryde-green mb-4"
               initial={{ opacity: 0, y: -10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -100,7 +100,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Volteryde on TikTok"
-                className="text-secondary-200 hover:text-primary-100 transition-colors"
+                className="text-secondary-200 hover:text-volteryde-green transition-colors"
               >
                 <FaTiktok size={24} aria-hidden="true" />
               </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Connect with Volteryde on LinkedIn"
-                className="text-secondary-200 hover:text-primary-100 transition-colors"
+                className="text-secondary-200 hover:text-volteryde-green transition-colors"
               >
                 <FaLinkedin size={24} aria-hidden="true" />
               </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Volteryde on Instagram"
-                className="text-secondary-200 hover:text-primary-100 transition-colors"
+                className="text-secondary-200 hover:text-volteryde-green transition-colors"
               >
                 <FaInstagram size={24} aria-hidden="true" />
               </Link>
@@ -133,7 +133,7 @@ export default function Footer() {
           animate={isInView ? "visible" : "hidden"}
           variants={copyrightVariants}
         >
-          <p className="text-primary-100 text-sm">
+          <p className="text-volteryde-green text-sm">
             © {currentYear} Volteryde. All rights reserved.
           </p>
         </motion.div>

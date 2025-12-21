@@ -77,7 +77,7 @@ export default function HeroSection() {
             >
               <Link
                 href="#how-it-works"
-                className="block py-2 px-8 rounded-[32px] font-semibold text-center transition-all duration-300 text-sm sm:text-base text-black border-1 border-primary-700 bg-primary-700 hover:text-black"
+                className="block py-2 px-8 rounded-[32px] font-semibold text-center transition-all duration-300 text-sm sm:text-base text-black border-1 border-volteryde-green bg-volteryde-green hover:text-black"
               >
                 Get volteryde
               </Link>
