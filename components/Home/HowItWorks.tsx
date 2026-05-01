@@ -28,7 +28,7 @@ export default function HowItWorks() {
           animate={isInView ? "visible" : "hidden"}
           variants={titleVariants}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-volteryde-green mb-4">
+          <h2 className="text-4xl md:text-5xl font-black text-[#1b3a1b] mb-4">
             How volteryde Works
           </h2>
         </motion.div>
