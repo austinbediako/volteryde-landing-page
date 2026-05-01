@@ -1,10 +1,15 @@
-'use client';
-import Image from 'next/image';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+"use client";
+import {
+  containerVariants,
+  phoneVariants,
+  stepVariants,
+  titleVariants,
+} from "@/libs/animation";
+import { steps } from "@/mock";
 import PhoneImg from "@/public/assets/phone.png";
-import { containerVariants, phoneVariants, stepVariants, titleVariants } from '@/libs/animation';
-import { steps } from '@/mock';
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
 
 export default function HowItWorks() {
   const ref = useRef(null);
@@ -12,7 +17,7 @@ export default function HowItWorks() {
 
   return (
     <section
-      id='how-it-works'
+      id="how-it-works"
       className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
       ref={ref}
     >
@@ -44,9 +49,9 @@ export default function HowItWorks() {
                 variants={stepVariants}
               >
                 {/* Number Circle */}
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <motion.div
-                    className="flex items-center justify-center w-16 h-16 rounded-full border-3 border-volteryde-green text-volteryde-green font-bold text-[32px]"
+                    className="flex items-center justify-center w-16 h-16 rounded-full border-3 border-volteryde-green text-[#1b3a1b] font-bold text-[32px]"
                     whileHover={{
                       scale: 1.1,
                       rotate: 360,
@@ -60,10 +65,10 @@ export default function HowItWorks() {
 
                 {/* Text Content */}
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-[32px] font-black text-volteryde-green mb-2">
+                  <h3 className="text-xl md:text-[32px] font-black text-[#1b3a1b] mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-secondary-200 text-base md:text-lg leading-relaxed">
+                  <p className="text-[#5b735b] text-base md:text-lg leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -80,9 +85,13 @@ export default function HowItWorks() {
           >
             <div className="relative w-full max-w-sm">
               <motion.div
-                animate={isInView ? {
-                  y: [0, -10, 0],
-                } : {}}
+                animate={
+                  isInView
+                    ? {
+                        y: [0, -10, 0],
+                      }
+                    : {}
+                }
                 transition={{
                   duration: 3,
                   repeat: Infinity,

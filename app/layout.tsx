@@ -1,7 +1,7 @@
+import { Footer, Navbar } from "@/components/global";
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { Footer, Navbar } from "@/components/global";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,8 +21,18 @@ export const metadata: Metadata = {
     template: "%s | Volteryde",
     default: "Volteryde | Smart Electric Transportation",
   },
-  description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
-  keywords: ["Volteryde", "Electric Bus", "Sustainable Transport", "Africa", "Ghana", "Green Energy", "Smart Mobility", "Public Transport"],
+  description:
+    "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+  keywords: [
+    "Volteryde",
+    "Electric Bus",
+    "Sustainable Transport",
+    "Africa",
+    "Ghana",
+    "Green Energy",
+    "Smart Mobility",
+    "Public Transport",
+  ],
   authors: [{ name: "Volteryde" }],
   creator: "Volteryde",
   publisher: "Volteryde",
@@ -69,7 +79,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Volteryde | Smart Electric Transportation",
-    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+    description:
+      "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
     url: "https://volteryde.com",
     type: "website",
     siteName: "Volteryde",
@@ -88,7 +99,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Volteryde | Smart Electric Transportation",
-    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+    description:
+      "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
     images: ["https://volteryde.com/og_image.png"],
     creator: "@volteryde",
     site: "@volteryde",
@@ -104,13 +116,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Volteryde",
-    description: "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+    description:
+      "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
     url: "https://volteryde.com",
     logo: "https://volteryde.com/mainlogo.png",
     sameAs: [
       "https://www.linkedin.com/company/volteryde/",
       "https://www.instagram.com/volterydeghana/",
-      "https://www.tiktok.com/@volteryde"
+      "https://www.tiktok.com/@volteryde",
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -118,12 +131,12 @@ export default function RootLayout({
       email: "info@volteryde.com",
       contactType: "customer service",
       areaServed: "GH",
-      availableLanguage: "English"
+      availableLanguage: "English",
     },
     address: {
       "@type": "PostalAddress",
-      addressCountry: "GH"
-    }
+      addressCountry: "GH",
+    },
   };
 
   const softwareAppJsonLd = {
@@ -132,12 +145,13 @@ export default function RootLayout({
     name: "Volteryde",
     operatingSystem: "Android, iOS",
     applicationCategory: "TravelApplication",
-    description: "Book electric bus rides in Ghana. Track your bus, pay securely, and enjoy eco-friendly transportation.",
+    description:
+      "Book electric bus rides in Ghana. Track your bus, pay securely, and enjoy eco-friendly transportation.",
     offers: {
       "@type": "Offer",
       price: "0",
-      priceCurrency: "USD"
-    }
+      priceCurrency: "USD",
+    },
   };
 
   return (
@@ -149,14 +163,14 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareAppJsonLd),
+          }}
         />
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
         <Navbar />
-        <main id="main-content">
-          {children}
-        </main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

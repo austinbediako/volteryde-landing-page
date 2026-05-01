@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import cityspaceImg from "@/public/assets/bus.svg";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
 
 export default function CitySpace() {
   const ref = useRef(null);
