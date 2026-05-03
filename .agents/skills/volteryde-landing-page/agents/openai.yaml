@@ -1,0 +1,6 @@
+interface:
+  display_name: "Volteryde Landing Page"
+  short_description: "Repo-specific patterns and workflows for volteryde-landing-page"
+  default_prompt: "Use the volteryde-landing-page repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
