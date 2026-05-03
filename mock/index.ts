@@ -53,3 +53,49 @@ export const navLinks: NavLink[] = [
   { label: "How Volteryde Works", href: "/#how-it-works" },
   { label: "Get Volteryde", href: "/#get-volteryde" },
 ];
+
+export const cards = [
+  {
+    title: "Always On Time",
+    description:
+      "Say goodbye to long waits and uncertainty. Our scheduled trips ensure your bus arrives when you expect it — every time.",
+    bgImage: "/assets/carousel1.png",
+    overlay: "bg-gradient-to-b from-black/80 via-black/40 to-transparent",
+    imageClass: "object-cover",
+    cta: { label: "Get Started", href: "/#get-volteryde" },
+    textPosition: "top" as const,
+  },
+  {
+    title: "Live Trip Tracking",
+    description:
+      "Track your ride in real-time from your phone. Know exactly where your bus is and when it will arrive.",
+    bgImage: "/assets/carousel2.png",
+    overlay:
+      "bg-gradient-to-t from-[#0a380a]/95 via-[#136613]/60 to-transparent",
+    bgColor: "bg-[#187a18]",
+    imageClass: "object-cover",
+    cta: undefined,
+    textPosition: "bottom" as const,
+  },
+  {
+    title: "Seamless Payments",
+    description:
+      "Pay easily with your digital wallet. No cash, no stress — just quick and secure transactions.",
+    bgImage: "/assets/carousel3.png",
+    overlay:
+      "bg-gradient-to-b from-[#7E6420]/90 via-[#7E6420]/60 to-transparent",
+    imageClass: "object-cover",
+    cta: undefined,
+    textPosition: "top" as const,
+  },
+  {
+    title: "Cleaner Rides",
+    description:
+      "Enjoy zero-emission electric buses built for your city. Better for you, better for the planet.",
+    bgImage: "/assets/carousel4.png",
+    overlay: "bg-gradient-to-t from-black/90 via-black/50 to-transparent",
+    imageClass: "object-cover",
+    cta: undefined,
+    textPosition: "bottom" as const,
+  },
+];
