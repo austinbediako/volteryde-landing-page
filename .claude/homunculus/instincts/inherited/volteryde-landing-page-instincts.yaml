@@ -1,0 +1,600 @@
+# Instincts generated from https://github.com/Volteryde/volteryde-landing-page
+# Generated: 2026-05-03T14:26:19.569Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: volteryde-landing-page-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Commit Length
+
+## Action
+
+Write moderate-length commit messages (~59 characters)
+
+## Evidence
+
+- Average commit message length: 59 chars
+- Based on 39 commits
+
+---
+id: volteryde-landing-page-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: volteryde-landing-page-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: volteryde-landing-page-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: volteryde-landing-page-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: volteryde-landing-page-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: components/home/*, components/global/*, app/*
+
+---
+id: volteryde-landing-page-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: src/**/*
+
+---
+id: volteryde-landing-page-workflow-update-site-branding-and-assets
+trigger: "when doing update site branding and assets"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Update Site Branding And Assets
+
+## Action
+
+Follow the update-site-branding-and-assets workflow:
+1. Update logo and branding image files in public/assets or public/
+2. Update references to logo or favicon in app/layout.tsx and/or app/site.webmanifest
+3. Update Navbar and Footer components to use new branding assets
+4. Update README.md or documentation if branding changes are significant
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: public/assets/Logo.png, public/logotextgreen.png, public/logotextwhite.png
+
+---
+id: volteryde-landing-page-workflow-seo-and-social-metadata-enhancement
+trigger: "when doing seo and social metadata enhancement"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Seo And Social Metadata Enhancement
+
+## Action
+
+Follow the seo-and-social-metadata-enhancement workflow:
+1. Update or add OpenGraph and Twitter meta tags in app/layout.tsx
+2. Add or update robots.txt in public/
+3. Add or update sitemap.ts in app/
+4. Add or update og.png, og_image.png, or other social preview images in public/
+5. Update or add JSON-LD structured data in layout or relevant files
+6. Update manifest or other metadata files as needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: app/layout.tsx, app/sitemap.ts, public/robots.txt
+
+---
+id: volteryde-landing-page-workflow-component-style-and-content-update
+trigger: "when doing component style and content update"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Component Style And Content Update
+
+## Action
+
+Follow the component-style-and-content-update workflow:
+1. Edit component file(s) in components/ to update styles, content, or layout
+2. Update related CSS or global style files if needed
+3. Update or add assets referenced by the component
+4. Test the component visually
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: components/global/Footer.tsx, components/global/Navbar.tsx, components/Home/HeroSection.tsx
+
+---
+id: volteryde-landing-page-workflow-dependency-and-lockfile-update
+trigger: "when doing dependency and lockfile update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Dependency And Lockfile Update
+
+## Action
+
+Follow the dependency-and-lockfile-update workflow:
+1. Update package.json (and/or package-lock.json, pnpm-lock.yaml) with new dependency versions
+2. Regenerate lockfiles
+3. Test build to ensure compatibility
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, pnpm-lock.yaml, package-lock.json
+
+---
+id: volteryde-landing-page-workflow-site-metadata-and-description-update
+trigger: "when doing site metadata and description update"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Workflow Site Metadata And Description Update
+
+## Action
+
+Follow the site-metadata-and-description-update workflow:
+1. Edit app/layout.tsx to update metadata
+2. Edit components/global/Footer.tsx to update footer description
+3. Commit both files together
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: app/layout.tsx, components/global/Footer.tsx
+
+---
+id: volteryde-landing-page-instinct-file-naming
+trigger: "When creating a new file or renaming an existing file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+- Observed in components/Home/HeroSection.tsx
+
+---
+id: volteryde-landing-page-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+- Observed in components/global/Footer.tsx
+
+---
+id: volteryde-landing-page-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+- Observed in components/global/Navbar.tsx
+
+---
+id: volteryde-landing-page-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+- Observed in app/layout.tsx
+
+---
+id: volteryde-landing-page-instinct-import-alias
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Import Alias
+
+## Action
+
+Use import aliases where appropriate
+
+## Evidence
+
+- Pattern in importStyle: alias
+- Observed in components/global/Footer.tsx
+
+---
+id: volteryde-landing-page-instinct-export-mixed
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Export Mixed
+
+## Action
+
+Use both named and default exports as needed
+
+## Evidence
+
+- Pattern in exportStyle: mixed
+- Observed in components/global/Navbar.tsx
+
+---
+id: volteryde-landing-page-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Test Location
+
+## Action
+
+Place test files in a separate test directory
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+- No tests found in src/ or components/
+
+---
+id: volteryde-landing-page-instinct-feature-test-sequence
+trigger: "When implementing a new feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Feature Test Sequence
+
+## Action
+
+Add tests for the feature after implementation and before documentation update
+
+## Evidence
+
+- Workflow: feature-development commitSequence includes 'Add tests for feature'
+- Example commits in feature-development
+
+---
+id: volteryde-landing-page-instinct-refactor-test-check
+trigger: "Before and after refactoring code"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Refactor Test Check
+
+## Action
+
+Ensure tests pass before and after refactoring
+
+## Evidence
+
+- Workflow: refactoring commitSequence includes 'Ensure tests pass before refactor' and 'Verify tests still pass'
+- Example commits in refactoring
+
+---
+id: volteryde-landing-page-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.95
+domain: git
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Commit Prefix
+
+## Action
+
+Start the commit message with a conventional prefix (feat, fix, refactor, style)
+
+## Evidence
+
+- Seen in commit: 'feat: update Next.js dependency and generate pnpm lock file'
+- Seen in commit: 'style: add explicit dimensions and styling to footer logo image'
+- Pattern in commits.prefixes
+
+---
+id: volteryde-landing-page-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, ideally around 60 characters
+
+## Evidence
+
+- Pattern in commits.averageLength: 59
+- Observed in example commit messages
+
+---
+id: volteryde-landing-page-instinct-update-branding-assets
+trigger: "When someone wants to change the site's branding, logo, favicon, or update related assets and metadata"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Update Branding Assets
+
+## Action
+
+Update logo and branding image files in public/assets or public/, update references in app/layout.tsx and/or app/site.webmanifest, update Navbar and Footer components, and update README.md if changes are significant
+
+## Evidence
+
+- Workflow: update-site-branding-and-assets
+- Example commits and files in workflow
+
+---
+id: volteryde-landing-page-instinct-seo-social-metadata
+trigger: "When someone wants to enhance SEO, update social media preview images, or improve search engine discoverability"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Seo Social Metadata
+
+## Action
+
+Update or add OpenGraph and Twitter meta tags in app/layout.tsx, update robots.txt, sitemap, social preview images, structured data, and manifest as needed
+
+## Evidence
+
+- Workflow: seo-and-social-metadata-enhancement
+- Example commits and files in workflow
+
+---
+id: volteryde-landing-page-instinct-component-style-update
+trigger: "When someone wants to tweak or improve the look, feel, or content of a component"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Component Style Update
+
+## Action
+
+Edit component file(s) in components/ to update styles, content, or layout; update related CSS or global style files if needed; update or add assets referenced by the component; test the component visually
+
+## Evidence
+
+- Workflow: component-style-and-content-update
+- Example commits and files in workflow
+
+---
+id: volteryde-landing-page-instinct-dependency-update
+trigger: "When someone wants to update a dependency or fix lockfile inconsistencies"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Dependency Update
+
+## Action
+
+Update package.json and lockfiles, then test build to ensure compatibility
+
+## Evidence
+
+- Workflow: dependency-and-lockfile-update
+- Seen in commit: 'feat: update Next.js dependency and generate pnpm lock file'
+
+---
+id: volteryde-landing-page-instinct-site-metadata-update
+trigger: "When someone wants to change the company description or target market displayed on the site"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Volteryde/volteryde-landing-page
+---
+
+# Volteryde Landing Page Instinct Site Metadata Update
+
+## Action
+
+Edit app/layout.tsx to update metadata and components/global/Footer.tsx to update footer description; commit both files together
+
+## Evidence
+
+- Workflow: site-metadata-and-description-update
+- Example commits and files in workflow
+
