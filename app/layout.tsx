@@ -170,7 +170,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
         <Navbar />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="relative">{children}</main>
         <Footer />
       </body>
     </html>

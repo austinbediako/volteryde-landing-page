@@ -11,7 +11,7 @@ const WhyChooseVolteryde = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
-    <section className="py-16 md:py-24 bg-white" ref={ref}>
+    <section className="relative py-16 md:py-24 bg-white" ref={ref}>
       {/* Centered header */}
       <div className="text-center mb-12 px-4 sm:px-8 lg:px-16">
         <motion.h2
@@ -47,8 +47,10 @@ const WhyChooseVolteryde = () => {
                 src={card.bgImage}
                 alt={card.title}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={`transition-transform duration-700 group-hover:scale-105 ${card.imageClass}`}
                 aria-hidden="true"
+                priority={i === 0}
               />
 
               <div

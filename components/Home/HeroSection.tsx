@@ -13,7 +13,8 @@ export default function HeroSection() {
           alt="Background Pattern"
           width={1849}
           height={1868}
-          className="w-full h-auto object-contain object-top"
+          className="object-contain object-top"
+          style={{ width: "100%", height: "auto" }}
           priority
         />
       </div>
@@ -72,7 +73,8 @@ export default function HeroSection() {
             alt="Volteryde App interface on multiple phones"
             width={1200}
             height={800}
-            className="w-full h-auto object-contain drop-shadow-2xl"
+            className="object-contain drop-shadow-2xl"
+            style={{ width: "100%", height: "auto" }}
             priority
           />
         </motion.div>

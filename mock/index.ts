@@ -82,8 +82,7 @@ export const cards = [
     description:
       "Pay easily with your digital wallet. No cash, no stress — just quick and secure transactions.",
     bgImage: "/assets/carousel3.png",
-    overlay:
-      "bg-gradient-to-b from-[#7E6420]/90 via-[#7E6420]/60 to-transparent",
+    overlay: "bg-gradient-to-b from-[#1B1B1B8F] via-[#1B1B1B8F] to-transparent",
     imageClass: "object-cover",
     cta: undefined,
     textPosition: "top" as const,

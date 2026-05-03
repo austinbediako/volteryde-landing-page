@@ -18,7 +18,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
+      className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
       ref={ref}
     >
       <div className="max-w-7xl mx-auto">

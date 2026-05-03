@@ -16,7 +16,7 @@ export default function GetVolteryde() {
   return (
     <section
       id="get-volteryde"
-      className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
+      className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white"
       ref={ref}
     >
       <div className="max-w-4xl mx-auto text-center">
