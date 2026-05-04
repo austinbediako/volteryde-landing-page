@@ -2,105 +2,49 @@
 import Logo from "@/public/assets/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { contactItemVariants, containerVariants, copyrightVariants, leftSideVariants, rightSideVariants } from "@/libs/animation";
 
 export default function Footer() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white pt-16 pb-8 px-4 sm:px-6 lg:px-8" ref={ref}>
-      <div className="container mx-auto">
-        {/* Main Footer Content */}
-        <motion.div
-          className="flex flex-col md:flex-row justify-between gap-12 px-10 mb-12 pb-12 border-b border-secondary-200"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
-        >
-          {/* Left Side - Logo and Description */}
-          <motion.div variants={leftSideVariants}>
-            <motion.div
-              className="mb-6"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href="/" className="">
-                <Image src={Logo} alt="Logo" />
-              </Link>
-            </motion.div>
-            <motion.p
-              className="text-secondary-200 text-sm leading-relaxed max-w-sm"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              Revolutionizing African education through practical design and
-              tech skills, mentorship, and opportunity.
-            </motion.p>
-          </motion.div>
+    <footer className="bg-volteryde-green px-6 sm:px-10 lg:px-16 pt-14 pb-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Main row */}
+        <div className="flex flex-col md:flex-row justify-between gap-10 pb-10 border-b border-white/30">
+          {/* Left — logo + tagline */}
+          <div>
+            <Link href="/" className="inline-block mb-5">
+              <Image
+                src={Logo}
+                alt="Volteryde Logo"
+                width={100}
+                height={50}
+                className="object-contain w-[100px] h-auto"
+                style={{
+                  filter: "brightness(0) invert(1)",
+                }}
+              />
+            </Link>
+            <p className="text-white/80 text-sm leading-relaxed max-w-xs">
+              Empowering sustainable movement across Africa with electric
+              transport and intelligent mobility solutions.
+            </p>
+          </div>
 
-          {/* Right Side - Contact Info */}
-          <motion.div variants={rightSideVariants}>
-            <motion.h3
-              className="text-lg font-bold text-primary-100 mb-4"
-              initial={{ opacity: 0, y: -10 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Contact
-            </motion.h3>
-            <motion.div
-              className="text-start space-y-2 text-secondary-200 text-sm"
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              variants={{
-                visible: {
-                  transition: {
-                    staggerChildren: 0.1,
-                    delayChildren: 0.3,
-                  },
-                },
-              }}
-            >
-              <motion.p
-                variants={contactItemVariants}
-                whileHover={{ x: 5, color: "#4CAF50" }}
-                transition={{ duration: 0.2 }}
-              >
-                University of Ghana, Legon
-              </motion.p>
-              <motion.p
-                variants={contactItemVariants}
-                whileHover={{ x: 5, color: "#4CAF50" }}
-                transition={{ duration: 0.2 }}
-              >
-                Email: info@voltryde.com
-              </motion.p>
-              <motion.p
-                variants={contactItemVariants}
-                whileHover={{ x: 5, color: "#4CAF50" }}
-                transition={{ duration: 0.2 }}
-              >
-                Phone: (123) 456-7890
-              </motion.p>
-            </motion.div>
-          </motion.div>
-        </motion.div>
+          {/* Right — contact */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
+            <div className="space-y-2 text-white/80 text-sm">
+              <p>Email: info@volteryde.com</p>
+              <p>Phone: +233 534544454</p>
+            </div>
+          </div>
+        </div>
 
         {/* Copyright */}
-        <motion.div
-          className="text-center"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          variants={copyrightVariants}
-        >
-          <p className="text-primary-100 text-sm">
-            © {new Date().getFullYear()} Voltryde. All rights reserved.
-          </p>
-        </motion.div>
+        <p className="text-center text-white text-sm mt-8">
+          © {currentYear} Volteryde. All rights reserved.
+        </p>
       </div>
     </footer>
   );

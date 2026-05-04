@@ -1,12 +1,21 @@
-import { CitySpaceSection, GetVoltrydeSection, HeroSection, HowItWorksSection } from "@/components/Home";
+import {
+  CitySpaceSection,
+  FAQSection,
+  GetVolterydeSection,
+  HeroSection,
+  HowItWorksSection,
+  WhyChooseVolterydeSection,
+} from "@/components/Home";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <WhyChooseVolterydeSection />
       <HowItWorksSection />
-      <GetVoltrydeSection />
+      <GetVolterydeSection />
       <CitySpaceSection />
+      <FAQSection />
     </>
   );
 }
