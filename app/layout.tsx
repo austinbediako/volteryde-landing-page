@@ -19,19 +19,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: "%s | Volteryde",
-    default: "Volteryde | Smart Electric Transportation",
+    default: "Book Electric Buses in Accra | Volteryde - Ride the Future, Today",
   },
   description:
-    "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+    "Ride the Future, Today with Volteryde. Book electric buses instantly, track your ride in real-time, and enjoy seamless payments. Ghana's smart commuting app.",
   keywords: [
+    "electric bus Ghana",
+    "book bus ride Accra",
+    "public transport app",
+    "eco-friendly commute",
+    "real-time bus tracking",
+    "cashless payments Ghana",
+    "sustainable transport",
     "Volteryde",
-    "Electric Bus",
-    "Sustainable Transport",
-    "Africa",
-    "Ghana",
-    "Green Energy",
-    "Smart Mobility",
-    "Public Transport",
   ],
   authors: [{ name: "Volteryde" }],
   creator: "Volteryde",
@@ -78,9 +78,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Volteryde | Smart Electric Transportation",
+    title: "Volteryde | Book Smart Electric Bus Rides - Ride the Future, Today",
     description:
-      "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+      "Ride the Future, Today. Download Volteryde and experience seamless electric bus commuting in Accra with real-time tracking and cashless payments.",
     url: "https://volteryde.com",
     type: "website",
     siteName: "Volteryde",
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
         secureUrl: "https://volteryde.com/og_image.png",
         width: 1200,
         height: 630,
-        alt: "Volteryde - Smart Electric Transportation",
+        alt: "Volteryde - Book Electric Bus Rides in Ghana",
         type: "image/png",
       },
     ],
@@ -98,9 +98,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Volteryde | Smart Electric Transportation",
+    title: "Volteryde - Ride the Future, Today",
     description:
-      "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
+      "Book electric buses, track rides in real-time, pay seamlessly. Download Volteryde now on Google Play and App Store.",
     images: ["https://volteryde.com/og_image.png"],
     creator: "@volteryde",
     site: "@volteryde",
@@ -120,9 +120,25 @@ export default function RootLayout({
       "Volteryde is a mobility operator and platform company that provides technology-enabled systems for mass transit operations in Ghana and beyond.",
     url: "https://volteryde.com",
     logo: "https://volteryde.com/mainlogo.png",
+    foundingDate: "2025",
+    foundingLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "GH",
+        addressLocality: "Accra",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Accra",
+      addressCountry: "GH",
+    },
     sameAs: [
-      "https://www.linkedin.com/company/volteryde/",
+      "https://x.com/volteryde",
       "https://www.instagram.com/volterydeghana/",
+      "https://www.facebook.com/volteryde",
+      "https://www.linkedin.com/company/volteryde/",
       "https://www.tiktok.com/@volteryde",
     ],
     contactPoint: {
@@ -136,6 +152,7 @@ export default function RootLayout({
     address: {
       "@type": "PostalAddress",
       addressCountry: "GH",
+      addressLocality: "Accra",
     },
   };
 
@@ -144,14 +161,28 @@ export default function RootLayout({
     "@type": "SoftwareApplication",
     name: "Volteryde",
     operatingSystem: "Android, iOS",
-    applicationCategory: "TravelApplication",
+    applicationCategory: "TransportationApplication",
     description:
-      "Book electric bus rides in Ghana. Track your bus, pay securely, and enjoy eco-friendly transportation.",
+      "Book electric bus rides in Ghana. Track your bus, pay securely, and enjoy eco-friendly transportation. Ride the Future, Today.",
+    url: "https://volteryde.com",
+    image: "https://volteryde.com/og_image.png",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
+      name: "Free to download",
     },
+    author: {
+      "@type": "Organization",
+      name: "VolteRyde",
+      url: "https://volteryde.org",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Accra",
+      addressCountry: "GH",
+    },
+    availableLanguage: "en",
   };
 
   return (
