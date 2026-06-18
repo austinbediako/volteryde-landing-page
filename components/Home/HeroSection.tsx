@@ -1,9 +1,11 @@
 "use client";
+import { useWaitlistModal } from "@/components/WaitlistModalProvider";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HeroSection() {
+  const { openModal } = useWaitlistModal();
+
   return (
     <section className="relative w-full min-h-screen bg-white overflow-hidden flex flex-col items-center">
       {/* Background Image */}
@@ -51,12 +53,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Link
-            href="/#get-volteryde"
+          <button
+            onClick={openModal}
             className="bg-volteryde-green text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_8px_30px_rgba(34,197,94,0.4)] hover:shadow-[0_8px_30px_rgba(34,197,94,0.6)] hover:-translate-y-1 transition-all inline-block"
           >
             Download App Now
-          </Link>
+          </button>
         </motion.div>
       </div>
 
